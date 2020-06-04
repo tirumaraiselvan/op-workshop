@@ -7,6 +7,8 @@ services:
     - "6432:5432"
     volumes:
     - db_data:/var/lib/postgresql/data
+    environment:
+      POSTGRES_PASSWORD: "mypassword"
   graphql-engine:
     image: hasura/graphql-engine:pull4982-35e0981f
     ports:
@@ -15,7 +17,7 @@ services:
     - "postgres"
     restart: always
     environment:
-      HASURA_GRAPHQL_DATABASE_URL: postgres://postgres:@postgres:5432/postgres
+      HASURA_GRAPHQL_DATABASE_URL: postgres://postgres:mypassword@postgres:5432/postgres
       HASURA_GRAPHQL_ENABLE_CONSOLE: "true"
       HASURA_GRAPHQL_DEV_MODE: "true"
 #      HASURA_GRAPHQL_ADMIN_SECRET: "secret"
