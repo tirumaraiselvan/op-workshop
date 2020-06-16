@@ -1,4 +1,6 @@
-### Deploy to Heroku 
+### Remote schema: playlist
 
-[![Deploy to
-Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/hasura/graphql-engine-heroku)
+- Use `docker-compose up -d`
+- Endpoint at http://localhost:8082/v1/graphql
+
+Provides tables `playlist` and `playlist_track`
