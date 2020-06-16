@@ -21,6 +21,10 @@ In the `functions` directory, use the following commands to set up:
 `npm i`
 `npm start`
 
+_Note_: You may need to change your version of Node to a compatible versiion; recommend something like 12.14.1
+
+Check out http://localhost:7071!
+
 #### 1. Hasura GraphQL Engine
 
 Back to the root directory, `docker-compose.yaml` provisions a PostgreSQL (v12) container and a Hasura GraphQL Engine Core (v1.3.0-beta.1)
