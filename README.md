@@ -8,7 +8,7 @@ Install Azure functions development tools (v3) by following the applicable instr
 https://github.com/Azure/azure-functions-core-tools
 
 In the `functions` directory, use the following commands to set up:
-`func init .`
+`func init`
 
 - Select node
 - Select TypeScript
@@ -16,14 +16,14 @@ In the `functions` directory, use the following commands to set up:
 `func new`
 
 - Select HTTP Trigger
-- Name: fullTrack
+- Name: trackWithLyrics
 
 `npm i`
-`npm start`
+`npm run start`
 
 _Note_: You may need to change your version of Node to a compatible versiion; recommend something like 12.14.1
 
-Check out http://localhost:7071!
+Check out http://localhost:7071/api/trackWithLyrics!
 
 #### 1. Hasura GraphQL Engine
 
@@ -51,4 +51,34 @@ Add the dataset:
 
 `psql postgres://postgres:mypassword@localhost:6432/postgres < chinook-limited.sql`
 
-Refresh the console and see the changes
+Go to console -> Data -> Track All, and Track All
+
+Check out the Graphiql playground!
+
+#### 3. Create an Action to add lyrics to tracks
+
+Back to `/functions/trackWithLyrics`:
+
+`yarn add node-fetch`
+
+_musixmatch keys:_
+If your birthday is an ODD number, use key #1:
+425562b56053fc2e4644aa2d3a30c5aa
+
+If your birthday is an EVEN number, use key #2:
+f1b8c4da8747b1fc66fa2217aa2e76c0
+
+#### 4. Add a remote schema for playlists
+
+See /remote-schemas
+
+#### 5. Intro to authorization (and authentication)
+
+Exploring the 'x-hasura-MMMMMM' headers and Permissions tabs
+
+For more, see our in-depth tutorial:
+https://hasura.io/learn/graphql/hasura-auth-slack/introduction/
+
+#### END. Sign up for our virtual conference!
+
+https://hasura.io/events/hasura-con-2020/
