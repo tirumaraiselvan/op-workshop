@@ -7,7 +7,12 @@
 Install Azure functions development tools (v3) by following the applicable instructions for your machine:
 https://github.com/Azure/azure-functions-core-tools
 
+Create a new functions directory here in the project root, and navigate to it:
+`mkdir functions`  
+`cd functions`
+
 In the `functions` directory, use the following commands to set up:
+
 `func init`
 
 - Select node
@@ -19,6 +24,7 @@ In the `functions` directory, use the following commands to set up:
 - Name: trackWithLyrics
 
 `npm i`
+
 `npm run start`
 
 _Note_: You may need to change your version of Node to a compatible versiion; recommend something like 12.14.1
@@ -59,14 +65,21 @@ Check out the Graphiql playground!
 
 Back to `/functions/trackWithLyrics`:
 
-`yarn add node-fetch`
+`cd functions/trackWithLyrics`
+
+`npm i node-fetch`
 
 _musixmatch keys:_
+
 If your birthday is an ODD number, use key #1:
 425562b56053fc2e4644aa2d3a30c5aa
 
 If your birthday is an EVEN number, use key #2:
 f1b8c4da8747b1fc66fa2217aa2e76c0
+
+_Note_:
+
+For macOS use `host.docker.internal` instead of `localhost` for local Azure function endpoints!
 
 #### 4. Add a remote schema for playlists
 
